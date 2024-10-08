@@ -40,10 +40,10 @@ const SettingsPage = () => {
   const form = useForm<z.infer<typeof SettingsSchema>>({
     resolver: zodResolver(SettingsSchema),
     defaultValues: {
-      password: undefined,
-      newPassword: undefined,
-      name: user?.name || undefined,
-      email: user?.email || undefined,
+      password: "",
+      newPassword: "",
+      name: user?.name || "",
+      email: user?.email || "",
       role: user?.role || undefined,
       isTwoFactorEnabled: user?.isTwoFactorEnabled as boolean || undefined,
     },
